@@ -102,7 +102,7 @@ for index in range(len(slova)):
         numstr += 1
         soucet += int(slova[index])
 
-# tisk vysledku
+# tisk vysledku prvni casti
 print('There are', len(slova), 'words in the selected text.')
 print('There are', titlecase, 'titlecase words.')
 print('There are', uppercase, 'uppercase words.')
@@ -111,7 +111,7 @@ print('There are', numstr, 'numeric strings.')
 print('The sum of all the numbers is:', soucet)
 print(oddelovac)
 
-# pocitani a naformatovany tisk delek slov v seznamu
+# pocitani a naformatovany tisk delek slov
 delky = {}
 for slovo in slova:
     if len(slovo) not in delky:
