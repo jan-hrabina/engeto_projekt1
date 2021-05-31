@@ -35,14 +35,18 @@ which traverse the valley. ''',
 uzivatele = {'bob': 123, 'ann': 'pass123', 'mike': 'password123', 'liz': 'pass123'}
 oddelovac = 40 * '-'
 
+# zadani jmena a hesla uzivatele
 user = input('username: ')
 password = input('password: ')
 
+# kontrola, zda se jedna o cislo, v tom pripade prevod na int
 if password.isnumeric():
     password = int(password)
 
 print(oddelovac)
 
+# kontrola jmena a odpovidajiciho hesla uzivatele, v pripade neshody konec applikace,
+# jinak privitani uzivatele
 if user in uzivatele.keys() and password == uzivatele.get(user):
     print(f'Welcome to the app,', user)
 else:
@@ -58,6 +62,7 @@ if not pocet_textu:
     print('No text to analyze, exiting app...')
     exit()
 
+# vyber textu k analyze
 cislo_textu = input('Enter a number btw. 1 and ' + str(pocet_textu) + ' to select: ')
 
 if (not cislo_textu.isnumeric()):
@@ -69,6 +74,9 @@ elif int(cislo_textu) not in range(1, pocet_textu + 1):
 
 print(oddelovac)
 
+
+# rozsekani vybraneho textu na slova, orezani interpunkce,
+# pocitani title, upper, lower, numstrings, souctu
 text = TEXTS[int(cislo_textu) - 1]
 slova = text.split()
 
@@ -94,6 +102,7 @@ for index in range(len(slova)):
         numstr += 1
         soucet += int(slova[index])
 
+# tisk vysledku
 print('There are', len(slova), 'words in the selected text.')
 print('There are', titlecase, 'titlecase words.')
 print('There are', uppercase, 'uppercase words.')
@@ -102,8 +111,8 @@ print('There are', numstr, 'numeric strings.')
 print('The sum of all the numbers is:', soucet)
 print(oddelovac)
 
+# pocitani a naformatovany tisk delek slov v seznamu
 delky = {}
-
 for slovo in slova:
     if len(slovo) not in delky:
         delky[len(slovo)] = 1
