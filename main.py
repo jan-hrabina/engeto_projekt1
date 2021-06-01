@@ -94,9 +94,11 @@ for index in range(len(slova)):
 
     if slova[index].isupper() and slova[index].isalpha():
         uppercase += 1
+        continue
 
     if slova[index].islower() and slova[index].isalpha():
         lowercase += 1
+        continue
 
     if slova[index].isnumeric():
         numstr += 1
