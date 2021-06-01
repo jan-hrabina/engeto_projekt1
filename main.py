@@ -123,6 +123,6 @@ print('LEN | OCCURENCES       | NR.')
 print(oddelovac)
 
 for index in range(1, len(delky) + 1):
-    pocet = (delky.get(index))
-    vyskyt = int(0 if pocet is None else pocet)
-    print('{:>3} | {:<17}  {:<12}'.format(index, vyskyt * '*', vyskyt))
+    pocet = delky.get(index)
+    if pocet:
+        print('{:>3} | {:<17}  {:<12}'.format(index, pocet * '*', pocet))
