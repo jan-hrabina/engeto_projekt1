@@ -32,16 +32,12 @@ which traverse the valley. ''',
     garpike and stingray are also present.'''
 ]
 
-uzivatele = {'bob': 123, 'ann': 'pass123', 'mike': 'password123', 'liz': 'pass123'}
+uzivatele = {'bob': '123', 'ann': 'pass123', 'mike': 'password123', 'liz': 'pass123'}
 oddelovac = 40 * '-'
 
 # zadani jmena a hesla uzivatele
 user = input('username: ')
 password = input('password: ')
-
-# kontrola, zda se jedna o cislo, v tom pripade prevod na int
-if password.isnumeric():
-    password = int(password)
 
 print(oddelovac)
 
