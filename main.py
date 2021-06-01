@@ -65,7 +65,7 @@ if not pocet_textu:
 # vyber textu k analyze
 cislo_textu = input('Enter a number btw. 1 and ' + str(pocet_textu) + ' to select: ')
 
-if (not cislo_textu.isnumeric()):
+if not cislo_textu.isnumeric():
     print('Wrong input, exiting app...')
     exit()
 elif int(cislo_textu) not in range(1, pocet_textu + 1):
