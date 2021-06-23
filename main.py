@@ -85,6 +85,9 @@ soucet = 0
 for index in range(len(slova)):
     slova[index] = slova[index].strip('.,;:!?')
 
+    if not slova[index]:
+        continue
+
     if slova[index][0].isupper():
         titlecase += 1
 
