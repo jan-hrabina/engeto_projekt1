@@ -10,7 +10,7 @@ some 1000 feet above Twin Creek Valley
 to an elevation of more than 7500 feet 
 above sea level. The butte is located just 
 north of US 30N and the Union Pacific Railroad, 
-which traverse the valley. ''',
+which traverse the valley . ''',
 
     '''At the base of Fossil Butte are the bright 
     red, purple, yellow and gray beds of the Wasatch 
@@ -76,6 +76,7 @@ print(oddelovac)
 text = TEXTS[int(cislo_textu) - 1]
 slova = text.split()
 
+pocet_slov = 0
 titlecase = 0
 uppercase = 0
 lowercase = 0
@@ -87,6 +88,8 @@ for index in range(len(slova)):
 
     if not slova[index]:
         continue
+    else:
+        pocet_slov += 1
 
     if slova[index][0].isupper():
         titlecase += 1
@@ -104,7 +107,7 @@ for index in range(len(slova)):
         soucet += int(slova[index])
 
 # tisk vysledku prvni casti
-print('There are', len(slova), 'words in the selected text.')
+print('There are', pocet_slov, 'words in the selected text.')
 print('There are', titlecase, 'titlecase words.')
 print('There are', uppercase, 'uppercase words.')
 print('There are', lowercase, 'lowercase words.')
